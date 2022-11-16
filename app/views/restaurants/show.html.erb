@@ -1,0 +1,14 @@
+<div class="container">
+<h1 class="text-center"><%= @restaurant.name %></h1>
+<h2>Address: <%=  @restaurant.address%></h2>
+<h3>Category: <%= @restaurant.category %></h3>
+<h3>Phone:<%= @restaurant.phone_number%></h3>
+<%= link_to 'Reviews', restaurant_reviews_path(@restaurant), class: "btn btn-outline-success" %>
+
+<br>
+<br>
+
+<%= render 'reviews/form' %>
+
+<%= link_to 'back' , restaurants_path, class: "btn btn-outline-dark"%>
+</div>
